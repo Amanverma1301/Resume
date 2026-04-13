@@ -173,9 +173,7 @@ refokus1  );
    <section  id="projects">
     <div className="min-h-screen   text-gray-200 relative overflow-hidden">
     < div className="block-container">
- <h1 id="project" className=" text-center text-5xl font-bold pt-10 pb-[2vh]">
-        Selected Web, Mobile, Video Projects...
-      </h1>
+
 <div id="blocks"></div>
  </div>
  <div  className="relative min-h-screen">
@@ -184,113 +182,74 @@ refokus1  );
      className="absolute w-full h-full object-cover opacity-25"
    />
       {/* Heading */}
-     
+      <h1 id="project" className=" text-center text-5xl font-bold pt-10">
+        Selected Web, Mobile, Video Projects...
+      </h1>
 
       {/* LEFT CARD */}
-  <Link to="work">
-  <motion.div
-    onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
-    onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
-    className="
-      absolute 
-      top-20 
-      left-[8vw]
-      w-[90vw] 
-      max-w-[550px] 
-      aspect-[16/9]
-      transition-transform duration-200
-    "
-  >
+      <Link to="work">
     <motion.div
-      variant={cardvariant}
-      ref={leftRef}
-      className="w-full h-full overflow-hidden "
-    />
+   
+ onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
+  onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
+  className="absolute top-32 left-[100px] ml-[8vw] w-[550px] h-[300px] transition-transform duration-200"
+>
+  
+  <motion.div variant={cardvariant}  ref={leftRef} className="w-full h-full  overflow-hidden" />
 
-    {/* TEXT */}
-    <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-32 z-10">
-      <h2 className="text-lg md:text-2xl font-semibold leading-none">
-        OBEY <br /> AGENCY
-      </h2>
-
-      <div className="w-32 md:w-48 mt-3 h-[2px] bg-white"></div>
-      <p className="mt-3 text-sm opacity-60">00</p>
-    </div>
-  </motion.div>
-  <div className="absolute top-[23rem] left-[10vw] w-[40vw] max-w-[550px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
-  <div className="absolute bottom-20 right-10 w-48 md:w-72 h-48 md:h-72 bg-purple-500/20 blur-[120px] rounded-full"></div>
-
-</Link>
-      {/* CENTER CARD */}
-      {/* CENTER CARD */}
-<Link to="/work2">
-  <div
-    onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
-    onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
-    className="
-      absolute
-      right-[5vw]
-      top-[25rem]
-      w-[85vw]
-      max-w-[320px]
-      aspect-[3/5]
-      transition-transform duration-200
-    "
-  >
-    <div
-      ref={centerRef}
-      className="w-full h-full overflow-hidden "
-    />
-
-    {/* TEXT */}
-    <div className="absolute -left-16 bottom-6 z-10">
-      <h2 className="text-lg md:text-2xl font-semibold leading-tight">
-        BLOGGING
-      </h2>
-      <h2 className="text-lg md:text-2xl font-semibold leading-tight">
-        APPLICATION
-      </h2>
-
-      <div className="w-32 md:w-48 h-[2px] bg-white mt-2"></div>
-      <p className="mt-2 text-sm opacity-60">02</p>
-    </div>
+  {/* TEXT */}
+  <div className="absolute -left-28 top-[180px] -translate-y-1/2 w-40 z-10">
+    <h2 className="text-[1.5vw] font-semibold leading-none">
+      OBEY <br /> AGENCY <br /> 
+    </h2>
+    <div className="w-80 mt-3 h-[3px] bg-white"></div>
+    <p className="mt-3 text-sm opacity-60">00</p>
   </div>
+</motion.div>
 </Link>
+<div className="absolute top-32 left-[50vw] ml-[8vw] w-[550px] h-[300px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+<div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/20 blur-[120px] rounded-full"></div>
 
+      {/* CENTER CARD */}
+      <Link to='/work2'>
+     <div 
+  onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
+  onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
+  className="absolute right-20 top-100 w-[320px] h-[510px] transition-transform duration-200"
+>
+  <div ref={centerRef} className="w-full h-full  overflow-hidden" />
 
-{/* RIGHT CARD */}
-<Link to="/work1">
-  <div
-    onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
-    onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
-    className="
-      absolute
-      top-[70%]
-      left-1/2
-      translate-x-[-50%]
-      translate-y-[-50%]
-      w-[90vw]
-      max-w-[550px]
-      aspect-[16/9]
-      z-10
-      transition-transform duration-200
-    "
-  >
-    <div
-      ref={rightRef}
-      className="w-full h-full overflow-hidden "
-    />
-
-    {/* TEXT */}
-   <div className=" z-10 -left-20 top-[-120px] relative">
-     <h2 className="text-[1.5vw] font-semibold">REFOKUS</h2>
-      <div className="w-60 h-[3px] bg-white mt-2"></div> 
-   <p className="mt-2 text-sm opacity-60">01</p> </div>
+  <div className="absolute -left-20 top-[350px] bottom-6 z-10">
+    <h2 className="text-[1.5vw]  font-semibold">BLOGGING</h2>
+        <h2 className=" text-[1.5vw] font-semibold">APPLICATION</h2>
+    <div className="w-60 h-[3px] bg-white mt-2"></div>
+    <p className="mt-2 text-sm opacity-60">02</p>
   </div>
-</Link>
 </div>
-      
+</Link>
+      {/* RIGHT CARD */}
+      <Link to="work1">
+      <div
+  onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
+  onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
+  className="absolute top-[70%] left-[55%] translate-x-[-50%] translate-y-[-50%] w-[550px] h-[300px] z-10 transition-transform duration-200"
+>
+  <div ref={rightRef} className="w-full h-full  overflow-hidden" />
 
-    </div>    </section>
+  <div className=" z-10  -left-20 top-[-120px]  relative">
+        <h2 className="text-[1.5vw] font-semibold">REFOKUS</h2>
+
+
+    <div className="w-60 h-[3px] bg-white mt-2"></div>
+    <p className="mt-2 text-sm opacity-60">01</p>
+  </div>
+  </div></Link>
+</div>
+      {/* CENTER DOT */}
+      <div className="absolute top-1/2 left-[55%] w-3 h-3 border border-white rounded-full opacity-60"></div>
+    
+
+    </div>
+m    </section>
   );
 }
