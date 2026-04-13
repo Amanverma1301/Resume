@@ -1,0 +1,132 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: #010102;
+  overflow: hidden;
+}
+
+/* IMAGES */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3; /* 👈 always on top */
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(127, 116, 255);
+  text-transform: uppercase;
+}
+
+/* BLOCK CONTAINER (BACKGROUND GRID) */
+.block-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* GRID */
+#blocks {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+/* INDIVIDUAL BLOCK */
+.block {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.4s ease;
+}
+
+/* 🔥 HIGHLIGHT EFFECT */
+.block.highlight {
+  background: rgba(14, 13, 13, 0.25);
+  box-shadow: 
+    0 0 10px rgba(15, 2, 162, 0.6),
+    0 0 20px rgba(19, 0, 232, 0.4),
+    0 0 40px rgba(48, 29, 255, 0.2);
+  animation: glow 0.4s ease;
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* MAIN CONTENT */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  z-index: 2; /* 👈 above grid */
+  pointer-events: none; /* 👈 allows hover to pass */
+}
+
+/* IMAGE LAYOUT */
+.images {
+  width: 60%;
+  margin: 10em auto;
+  display: flex;
+  gap: 10em;
+}
+
+.col {
+  flex: 1;
+}
+
+/* OFFSET SECOND COLUMN */
+.col:nth-child(2) {
+  margin-top: 15em;
+}
+
+/* IMAGE CARD */
+.img {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #c5b6af;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* ✅ fixed */
+  padding: 10px;
+  margin-bottom: 10em;
+  border-radius: 10px;
+}
+
+/* OPTIONAL: SMOOTH SCROLL FEEL */
+html {
+  scroll-behavior: smooth;
+}

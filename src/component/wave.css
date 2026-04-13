@@ -1,0 +1,35 @@
+.wave1 {
+  fill: #3b82f6;
+  animation: waveMove 2s linear infinite;
+}
+
+.wave2 {
+  fill: #60a5fa;
+  opacity: 0.5;
+  animation: waveMove 8s linear infinite reverse;
+}
+
+/* 🌊 Smooth Wave Motion */
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120px);
+  }
+}
+
+@keyframes waveMoveReverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+/* Smooth vertical movement */
+
+.waveGroup {
+  will-change: transform;
+}

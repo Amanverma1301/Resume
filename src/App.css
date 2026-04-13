@@ -1,0 +1,9 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+/* 🔥 Modern Custom Scrollbar */
+@font-face {
+    font-family:heading;
+    src: url("../../assets/play.ttf");
+}

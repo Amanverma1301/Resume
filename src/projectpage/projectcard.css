@@ -1,0 +1,24 @@
+/* 🔥 Modern Custom Scrollbar */
+
+/* Width */
+.custom-scroll::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track (background) */
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thumb (scroll handle) */
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #6366f1);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Hover effect */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a855f7, #818cf8);
+}
